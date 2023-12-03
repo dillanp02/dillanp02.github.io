@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const NavBar = styled.nav`
     font-size: 2em;
-    border-bottom: solid 3px black;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -16,14 +15,10 @@ const NavBar = styled.nav`
 
 const NavLink = styled(Link)`
     text-decoration: none;
-    color: black;
-    transition: 0.3s;
     padding-inline: 10px;
     text-align: center;
-    &:hover{
-        background: black;
-        color: white;
-    }
+    background-color: ${({ theme }) => theme.colors.background};
+    color: ${({theme}) => theme.colors.text}
 `
 
 export default function Navbar() {
