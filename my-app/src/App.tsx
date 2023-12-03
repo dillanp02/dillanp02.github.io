@@ -4,10 +4,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
-import Navbar from './components/Navbar';
 import { HOME_LINK, ABOUT_LINK, CONTACT_LINK } from './constants/url-links';
 import { GlobalStyles } from './components/styles/Global';
-import { ThemeContainer, ThemeButton } from "./components/styles/ThemeSwitching.styled";
+import { ThemeContainer, ThemeButton } from "./components/ThemeSwitching";
 import { ThemeProvider } from 'styled-components';
 import {
   light,
@@ -17,13 +16,16 @@ import {
   brown,
   pink,
 } from "./components/styles/ThemeStyles";
+import { NavLink } from './components/Navigation/NavLink';
+import { NavBar } from './components/Navigation/Navbar';
+import { DefaultContainer } from './components/Containers/DefaultContainer';
 
 
 
 function App() {
 
-  const [selectedTheme, setSelectedTheme] = useState(light);
-
+  const [selectedTheme, setSelectedTheme] = useState(dark);
+  const [showThemes, setShowThemes] = useState(false)
   // react hook to get the theme selected by the user that is saved in local storage
   useEffect(() => {
     const currentTheme = JSON.parse(localStorage.getItem("current-theme") as string);
@@ -40,11 +42,12 @@ function App() {
 
   return (
     <ThemeProvider theme={selectedTheme}>
-        <GlobalStyles />
-        <Navbar/>
-
+      <GlobalStyles />
+      <NavBar>
+        <NavLink to={HOME_LINK}>Home</NavLink>
+        <NavLink to={ABOUT_LINK}>About</NavLink>
+        <NavLink to={CONTACT_LINK}>Contact</NavLink>
         <ThemeContainer>
-          <span>Themes: </span>
           <ThemeButton
             className={`light ${selectedTheme === light ? "active" : ""}`}
             onClick={() => HandleThemeChange(light)}>
@@ -70,7 +73,10 @@ function App() {
             onClick={() => HandleThemeChange(pink)}>
           </ThemeButton>
         </ThemeContainer>
+      </NavBar>
 
+      
+      <DefaultContainer>
         <Routes>
           <Route index element={<Home />} />
           <Route path={HOME_LINK} element={<Home />} />
@@ -78,6 +84,7 @@ function App() {
           <Route path={CONTACT_LINK} element={<Contact />} />
           <Route path="*" element={<ErrorPage errorCode={404} errorMessage='Page not found'/>} />
         </Routes>
+      </DefaultContainer>
     </ThemeProvider>
   );
 }

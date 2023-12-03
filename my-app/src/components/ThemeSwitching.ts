@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 export const ThemeContainer = styled.div`
   background-color: ${ ({ theme }) => theme.colors.background };
-  border-bottom: 1px solid ${ ({ theme }) => theme.colors.border };
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 10px;
 `;
 
 export const ThemeButton = styled.button`
