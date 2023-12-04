@@ -18,22 +18,22 @@ export const GlobalStyles = createGlobalStyle`
 
   // theme buttons color
   .light {
-    background-color: ${theme.light.colors.header};
+    background-color: ${theme.light.colors.background};
   }
   .dark {
-    background-color: ${theme.dark.colors.header};
+    background-color: ${theme.dark.colors.background};
   }
   .blue {
-    background-color: ${theme.blue.colors.header};
+    background-color: ${theme.blue.colors.background};
   }
   .green {
-    background-color: ${theme.green.colors.header};
+    background-color: ${theme.green.colors.background};
   }
   .brown {
-    background-color: ${theme.brown.colors.header};
+    background-color: ${theme.brown.colors.background};
   }
   .pink {
-    background-color: ${theme.pink.colors.header};
+    background-color: ${theme.pink.colors.background};
   }
 
   // active theme

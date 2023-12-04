@@ -25,7 +25,6 @@ import { DefaultContainer } from './components/Containers/DefaultContainer';
 function App() {
 
   const [selectedTheme, setSelectedTheme] = useState(dark);
-  const [showThemes, setShowThemes] = useState(false)
   // react hook to get the theme selected by the user that is saved in local storage
   useEffect(() => {
     const currentTheme = JSON.parse(localStorage.getItem("current-theme") as string);
