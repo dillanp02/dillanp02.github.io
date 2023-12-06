@@ -1,7 +1,10 @@
+import { DefaultContainer } from "../components/Containers/DefaultContainer";
 
 
 export default function About(){
     return (
-        <h1>About</h1>
+        <DefaultContainer>
+            <h1>About</h1>
+        </DefaultContainer>
     )
 }

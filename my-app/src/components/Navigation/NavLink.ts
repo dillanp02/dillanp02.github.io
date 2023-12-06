@@ -1,8 +1,7 @@
 import styled from "styled-components"
-import { Link } from "react-router-dom"
+import { DefaultLink } from "./DefaultLink"
 
-export const NavLink = styled(Link)`
-    text-decoration: none;
+export const NavLink = styled(DefaultLink)`
     padding-inline: 10px;
     text-align: center;
     background-color: ${({ theme }) => theme.colors.background};

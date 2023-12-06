@@ -18,7 +18,6 @@ import {
 } from "./components/styles/ThemeStyles";
 import { NavLink } from './components/Navigation/NavLink';
 import { NavBar } from './components/Navigation/Navbar';
-import { DefaultContainer } from './components/Containers/DefaultContainer';
 
 
 
@@ -75,7 +74,6 @@ function App() {
       </NavBar>
 
       
-      <DefaultContainer>
         <Routes>
           <Route index element={<Home />} />
           <Route path={HOME_LINK} element={<Home />} />
@@ -83,7 +81,6 @@ function App() {
           <Route path={CONTACT_LINK} element={<Contact />} />
           <Route path="*" element={<ErrorPage errorCode={404} errorMessage='Page not found'/>} />
         </Routes>
-      </DefaultContainer>
     </ThemeProvider>
   );
 }
