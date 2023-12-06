@@ -1,9 +1,9 @@
 export const light = {
     name: "light-theme",
     colors: {
-      background: "#ffffff",
-      text: "#292828",
-      border: "#DEDEDE",
+      background: "#DEDEDE",
+      text: "#ffffff",
+      border: "#838181",
       image_darkness_factor: 1
     },
   };

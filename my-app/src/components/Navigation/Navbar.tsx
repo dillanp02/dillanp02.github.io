@@ -8,6 +8,7 @@ const Bar = styled.nav`
     gap: 10px;
     justify-content: center;
     padding: 20px;
+    background-color:  ${({ theme }) => theme.colors.border};
     @media screen and (max-width: ${MOBILE_RESPONSIVE_SIZE}) {
         padding: 10px 0;
         flex-direction: column;

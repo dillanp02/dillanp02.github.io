@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ThemeContainer = styled.div`
-  background-color: ${ ({ theme }) => theme.colors.background };
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

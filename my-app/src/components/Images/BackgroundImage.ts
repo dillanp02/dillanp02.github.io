@@ -14,7 +14,6 @@ export const BackgroundImage = styled(DefaultImage)<ImgProp>`
     z-index: 1;
     padding: 2px;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
     filter: blur(3px) brightness(${({ theme }) => theme.colors.image_darkness_factor});
     object-fit: cover;
     
