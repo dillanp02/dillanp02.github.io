@@ -1,9 +1,9 @@
 import { DefaultImage } from "./DefaultImage";
 import styled, { css } from "styled-components";
 
-interface ImgProp {
-	show: boolean;
-}
+type ImgProp = {
+	$show: boolean;
+};
 
 export const BackgroundImage = styled(DefaultImage)<ImgProp>`
 	width: 100%;
@@ -19,7 +19,7 @@ export const BackgroundImage = styled(DefaultImage)<ImgProp>`
 	object-fit: cover;
 
 	${(props) =>
-		props.show &&
+		props.$show &&
 		css`
 			opacity: 1;
 		`};

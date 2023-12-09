@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { MOBILE_RESPONSIVE_SIZE } from "../../constants/css-constants";
 
-export const TitleText = styled.h1`
-	font-size: 2rem;
-	font-weight: 700;
+export const BodyText = styled.h3`
+	font-size: 1.5;
+	font-weight: 500;
 	text-align: left;
 	z-index: 2;
 	position: relative;
-	margin-bottom: 10px;
+
 	@media screen and (max-width: ${MOBILE_RESPONSIVE_SIZE}) {
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 `;

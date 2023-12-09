@@ -12,8 +12,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${ ({ theme }) => theme.colors.background };
-    color: ${ ({ theme }) => theme.colors.text };
+    background-color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text};
     font-family: monospace;
   }
 
@@ -42,4 +42,4 @@ export const GlobalStyles = createGlobalStyle`
       border: 3px solid ${({ theme }) => theme.colors.border};
   }
 
-`
+`;

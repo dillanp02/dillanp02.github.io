@@ -24,6 +24,8 @@ import {
 import { NavLink } from "./components/Navigation/NavLink";
 import { NavBar } from "./components/Navigation/Navbar";
 import SocialMedia from "./pages/SocialMedia";
+import { Footer } from "./components/Navigation/Footer";
+import { FadeOnViewContainer } from "./components/Containers/FadeOnViewContainer";
 
 function App() {
 	const [selectedTheme, setSelectedTheme] = useState(dark);
@@ -88,6 +90,9 @@ function App() {
 					element={<ErrorPage errorCode={404} errorMessage="Page not found" />}
 				/>
 			</Routes>
+			<FadeOnViewContainer triggerOnce>
+				<Footer />
+			</FadeOnViewContainer>
 		</ThemeProvider>
 	);
 }

@@ -52,7 +52,7 @@ export default function SocialMedia() {
 					<TitleText>Twitter</TitleText>
 					<BackgroundImage
 						src={twitter_img}
-						show={currentPhoto === "twitter"}
+						$show={currentPhoto === "twitter"}
 					/>
 				</LinkWrapper>
 			</MasonaryTile>
@@ -64,7 +64,7 @@ export default function SocialMedia() {
 					<TitleText>Spotify</TitleText>
 					<BackgroundImage
 						src={currentPhoto === "spotify" ? spotify_img : black_img}
-						show={currentPhoto === "spotify"}
+						$show={currentPhoto === "spotify"}
 					/>
 				</LinkWrapper>
 			</ExtraWideTallMasonaryTile>
@@ -74,17 +74,17 @@ export default function SocialMedia() {
 					<TitleText>Snapchat</TitleText>
 					<BackgroundImage
 						src={snapchat_img}
-						show={currentPhoto === "snapchat"}
+						$show={currentPhoto === "snapchat"}
 					/>
 				</LinkWrapper>
 			</MasonaryTile>
 
 			<ExtraTallMasonaryTile onMouseEnter={() => setCurrentPhoto("discord")}>
-				<LinkWrapper href="https://discordapp.com/users/dillanp02">
+				<LinkWrapper href="https://discord.gg/fBdfymTtQC">
 					<TitleText>Discord</TitleText>
 					<BackgroundImage
 						src={currentPhoto === "discord" ? discord_img : discord_blue}
-						show={currentPhoto === "discord"}
+						$show={currentPhoto === "discord"}
 					/>
 				</LinkWrapper>
 			</ExtraTallMasonaryTile>
@@ -94,7 +94,7 @@ export default function SocialMedia() {
 					<TitleText>YouTube</TitleText>
 					<BackgroundImage
 						src={currentPhoto === "youtube" ? youtube_img : white_img}
-						show={currentPhoto === "youtube"}
+						$show={currentPhoto === "youtube"}
 					/>
 				</LinkWrapper>
 			</WideMasonaryTile>
@@ -104,7 +104,7 @@ export default function SocialMedia() {
 					<TitleText>Letterboxd</TitleText>
 					<BackgroundImage
 						src={letterboxd_img}
-						show={currentPhoto === "letterboxd"}
+						$show={currentPhoto === "letterboxd"}
 					/>
 				</LinkWrapper>
 			</MasonaryTile>
@@ -114,7 +114,7 @@ export default function SocialMedia() {
 					<TitleText>Bereal</TitleText>
 					<BackgroundImage
 						src={currentPhoto === "bereal" ? bereal_img : black_img}
-						show={currentPhoto === "bereal"}
+						$show={currentPhoto === "bereal"}
 					/>
 				</LinkWrapper>
 			</TallMasonaryTile>
@@ -124,7 +124,7 @@ export default function SocialMedia() {
 					<TitleText>Instagram</TitleText>
 					<BackgroundImage
 						src={currentPhoto === "insta" ? instagram_img : white_img}
-						show={currentPhoto === "insta"}
+						$show={currentPhoto === "insta"}
 					/>
 				</LinkWrapper>
 			</WideTallMasonaryTile>
@@ -134,7 +134,7 @@ export default function SocialMedia() {
 					<TitleText>Reddit</TitleText>
 					<BackgroundImage
 						src={currentPhoto === "reddit" ? reddit_img : white_img}
-						show={currentPhoto === "reddit"}
+						$show={currentPhoto === "reddit"}
 					/>
 				</LinkWrapper>
 			</MasonaryTile>
@@ -144,7 +144,7 @@ export default function SocialMedia() {
 					<TitleText>Twitch</TitleText>
 					<BackgroundImage
 						src={currentPhoto === "twitch" ? twitch_img : twitch_frame}
-						show={currentPhoto === "twitch"}
+						$show={currentPhoto === "twitch"}
 					/>
 				</LinkWrapper>
 			</ExtraTallMasonaryTile>
@@ -154,7 +154,7 @@ export default function SocialMedia() {
 					<TitleText>LinkedIn</TitleText>
 					<BackgroundImage
 						src={currentPhoto === "linkedin" ? linkedin_img : white_img}
-						show={currentPhoto === "linkedin"}
+						$show={currentPhoto === "linkedin"}
 					/>
 				</LinkWrapper>
 			</WideTallMasonaryTile>
