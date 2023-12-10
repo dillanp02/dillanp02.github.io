@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.js": "/static/js/main.51a1774e.js",
+    "main.js": "/static/js/main.b57e494c.js",
     "static/js/787.d4aba7ab.chunk.js": "/static/js/787.d4aba7ab.chunk.js",
     "static/media/social_media.jpg": "/static/media/social_media.41fcf5dabc01d17f2513.jpg",
+    "static/media/hello.jpg": "/static/media/hello.d0caafd9e2b2102c4d46.jpg",
     "static/media/theme.jpg": "/static/media/theme.3c2da771352551a0bad3.jpg",
     "static/media/twitch.gif": "/static/media/twitch.94a4972ec71487fdc847.gif",
+    "static/media/choice.jpg": "/static/media/choice.41ecb381668edbaccf80.jpg",
     "static/media/linkedin.gif": "/static/media/linkedin.4acb9b614426f4a5beb5.gif",
     "static/media/discord-logo.gif": "/static/media/discord-logo.7a45438cc24c523283f4.gif",
     "static/media/snapchat-logo.gif": "/static/media/snapchat-logo.28d825d163ed729a35c2.gif",
@@ -19,10 +21,10 @@
     "static/media/discord-frame.png": "/static/media/discord-frame.54cfd5974fb2c8228085.png",
     "static/media/letterboxd.png": "/static/media/letterboxd.97a1005bdad406ee77df.png",
     "index.html": "/index.html",
-    "main.51a1774e.js.map": "/static/js/main.51a1774e.js.map",
+    "main.b57e494c.js.map": "/static/js/main.b57e494c.js.map",
     "787.d4aba7ab.chunk.js.map": "/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.51a1774e.js"
+    "static/js/main.b57e494c.js"
   ]
 }
