@@ -6,4 +6,5 @@ export const Footer = styled.footer`
 	min-height: 50px;
 	margin-top: ${DEFAULT_MARGIN};
 	border-top: 3px solid ${({ theme }) => theme.colors.text};
+	transition: all 1s ease;
 `;
