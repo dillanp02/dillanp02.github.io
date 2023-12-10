@@ -6,6 +6,7 @@ import {
 } from "../../constants/css-constants";
 
 export const DefaultContainer = styled.div`
+	transition: all 1s ease;
 	margin: ${DEFAULT_MARGIN} ${DEFAULT_INLINE_MARGIN_PERCENTAGE};
 	padding: 20px;
 	background-color: ${({ theme }) => theme.colors.border};

@@ -11,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    transition: all 1s ease;
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     font-family: monospace;

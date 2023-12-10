@@ -4,8 +4,6 @@ import { MOBILE_RESPONSIVE_SIZE } from "../../constants/css-constants";
 export const MasonaryTile = styled.span`
 	border: solid 3px ${({ theme }) => theme.colors.text};
 	background-color: ${({ theme }) => theme.colors.border};
-	transition: all 1s ease;
-
 	margin: 10px;
 	padding: 0 20px;
 	display: flex;
@@ -13,7 +11,7 @@ export const MasonaryTile = styled.span`
 	justify-content: center;
 	position: relative;
 	min-height: 150px;
-
+	transition: all 1s ease;
 	&:hover {
 		transform: translateY(-8px);
 		scale: 1.05;
