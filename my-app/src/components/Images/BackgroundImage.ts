@@ -1,27 +1,21 @@
-import { DefaultImage } from "./DefaultImage";
+import { StyledDefaultImage } from "./DefaultImage";
 import styled, { css } from "styled-components";
 
 type ImgProp = {
 	$show: boolean;
 };
 
-export const BackgroundImage = styled(DefaultImage)<ImgProp>`
+export const BackgroundImage = styled(StyledDefaultImage)<ImgProp>`
 	transition: all 1s ease;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	padding: 2px;
 	opacity: 0;
+	overflow: hidden;
 	filter: blur(3px)
 		brightness(${({ theme }) => theme.colors.image_darkness_factor});
-	object-fit: cover;
 
 	${(props) =>
 		props.$show &&
 		css`
 			opacity: 1;
+			border-radius: 10px;
 		`};
 `;

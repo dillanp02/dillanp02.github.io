@@ -8,7 +8,9 @@ export const TitleText = styled.h1`
 	z-index: 2;
 	position: relative;
 	margin-bottom: 10px;
+	-webkit-text-stroke: 2px ${({ theme }) => theme.colors.border};
 	@media screen and (max-width: ${MOBILE_RESPONSIVE_SIZE}) {
 		font-size: 1.5em;
+		-webkit-text-stroke: 1px ${({ theme }) => theme.colors.border};
 	}
 `;

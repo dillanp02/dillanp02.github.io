@@ -4,6 +4,7 @@ import {
 	CONTACT_LINK,
 	HOME_LINK,
 	SOCIAL_MEDIA_LINK,
+	THEMES_LINK,
 } from "../constants/url-links";
 import SocialMedia from "./SocialMedia";
 import Home from "./Home";
@@ -11,6 +12,7 @@ import About from "./About";
 import Contact from "./Contact";
 import ErrorPage from "./ErrorPage";
 import { AnimatePresence } from "framer-motion";
+import Themes from "./Themes";
 
 function AnimatedRoutes() {
 	const location = useLocation();
@@ -23,6 +25,7 @@ function AnimatedRoutes() {
 				<Route path={ABOUT_LINK} element={<About />} />
 				<Route path={CONTACT_LINK} element={<Contact />} />
 				<Route path={SOCIAL_MEDIA_LINK} element={<SocialMedia />} />
+				<Route path={THEMES_LINK} element={<Themes />} />
 				<Route
 					path="*"
 					element={<ErrorPage errorCode={404} errorMessage="Page not found" />}

@@ -15,6 +15,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     font-family: monospace;
+    overflow-x: hidden;
   }
 
   // theme buttons color

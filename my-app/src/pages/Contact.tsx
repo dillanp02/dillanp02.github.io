@@ -1,18 +1,12 @@
-import { motion } from "framer-motion";
 import { DefaultContainer } from "../components/Containers/DefaultContainer";
+import PageTransition from "./PageTransition";
 
 export default function Contact() {
 	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			key="contactpage"
-			transition={{ duration: 1 }}
-		>
+		<PageTransition $key="contactpage">
 			<DefaultContainer>
 				<h1>Contact</h1>
 			</DefaultContainer>
-		</motion.div>
+		</PageTransition>
 	);
 }
