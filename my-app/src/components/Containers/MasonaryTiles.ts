@@ -12,6 +12,8 @@ export const MasonaryTile = styled.span`
 	position: relative;
 	min-height: 150px;
 	transition: all 1s ease;
+	overflow: hidden;
+
 	&:hover {
 		transform: translateY(-8px);
 		scale: 1.05;

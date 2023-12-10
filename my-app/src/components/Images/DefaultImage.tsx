@@ -14,6 +14,7 @@ const AttributionText = styled.a`
 `;
 
 export const StyledDefaultImage = styled.img`
+	transition: all 1s ease;
 	min-width: 100%;
 	max-height: 100%;
 	position: absolute;
