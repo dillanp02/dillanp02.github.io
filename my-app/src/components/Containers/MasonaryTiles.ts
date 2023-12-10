@@ -4,6 +4,8 @@ import { MOBILE_RESPONSIVE_SIZE } from "../../constants/css-constants";
 export const MasonaryTile = styled.span`
 	border: solid 3px ${({ theme }) => theme.colors.text};
 	background-color: ${({ theme }) => theme.colors.border};
+	transition: all 1s ease;
+
 	margin: 10px;
 	padding: 0 20px;
 	display: flex;

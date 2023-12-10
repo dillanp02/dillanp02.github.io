@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
-import { useInView } from "react-intersection-observer";
+import { ReactNode, useRef } from "react";
+import { useInView } from "framer-motion";
 import styled, { css } from "styled-components";
 
 type Props = {
 	children?: ReactNode;
-	ref?: (node?: Element | null | undefined) => void;
+	ref?: React.MutableRefObject<null>;
 	$inView?: boolean;
 	triggerOnce?: boolean | undefined;
 	$delay?: string;
@@ -23,16 +23,13 @@ const FadeContainer: React.FC<Props> = styled.div`
 			  `}
 `;
 
-export const FadeOnViewContainer: React.FC<Props> = ({
+export const FadeInOnViewContainer: React.FC<Props> = ({
 	$delay,
 	children,
 	triggerOnce,
 }) => {
-	const { ref, inView } = useInView({
-		/* Optional options */
-		threshold: 0.1,
-		triggerOnce: triggerOnce,
-	});
+	const ref = useRef(null);
+	const inView = useInView(ref, { once: triggerOnce || false });
 
 	return (
 		<FadeContainer ref={ref} $inView={inView} $delay={$delay}>

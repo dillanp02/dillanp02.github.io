@@ -6,6 +6,7 @@ type ImgProp = {
 };
 
 export const BackgroundImage = styled(DefaultImage)<ImgProp>`
+	transition: all 1s ease;
 	width: 100%;
 	height: 100%;
 	position: absolute;

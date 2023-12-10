@@ -16,15 +16,22 @@ import { BackgroundImage } from "../components/Images/BackgroundImage";
 import { useState } from "react";
 import { DefaultContainer } from "../components/Containers/DefaultContainer";
 import { BodyText } from "../components/Text/BodyText";
-import { FadeOnViewContainer } from "../components/Containers/FadeOnViewContainer";
+import { FadeInOnViewContainer } from "../components/Containers/FadeInOnViewContainer";
+import { motion } from "framer-motion";
 
 export default function Home() {
 	type Tile = "about" | "theme" | "social_media" | "";
 	const [showAboutPhoto, setShowAboutPhoto] = useState<Tile>("");
 
 	return (
-		<>
-			<FadeOnViewContainer $delay={"100ms"} triggerOnce>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			key="homepage"
+			transition={{ duration: 1 }}
+		>
+			<FadeInOnViewContainer $delay={"100ms"} triggerOnce>
 				<DefaultContainer>
 					<TitleText>Welcome👋</TitleText>
 					<BodyText>
@@ -41,9 +48,9 @@ export default function Home() {
 						Click the tiles below to explore - see you around!
 					</BodyText>
 				</DefaultContainer>
-			</FadeOnViewContainer>
+			</FadeInOnViewContainer>
 
-			<FadeOnViewContainer $delay={"300ms"} triggerOnce>
+			<FadeInOnViewContainer $delay={"300ms"} triggerOnce>
 				<DefaultContainer>
 					<TitleText>Where am I?</TitleText>
 					<BodyText>
@@ -59,9 +66,9 @@ export default function Home() {
 						new tools and techniques. Watch this space...
 					</BodyText>
 				</DefaultContainer>
-			</FadeOnViewContainer>
+			</FadeInOnViewContainer>
 
-			<FadeOnViewContainer $delay="500ms" triggerOnce>
+			<FadeInOnViewContainer $delay="500ms" triggerOnce>
 				<MasonaryContainer>
 					<TallMasonaryTile onMouseEnter={() => setShowAboutPhoto("about")}>
 						<DefaultLink to={ABOUT_LINK}>
@@ -109,7 +116,7 @@ export default function Home() {
 
 					<MasonaryTile>Normal</MasonaryTile>
 				</MasonaryContainer>
-			</FadeOnViewContainer>
-		</>
+			</FadeInOnViewContainer>
+		</motion.div>
 	);
 }

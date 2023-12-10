@@ -1,15 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import ErrorPage from "./pages/ErrorPage";
-import {
-	HOME_LINK,
-	ABOUT_LINK,
-	CONTACT_LINK,
-	SOCIAL_MEDIA_LINK,
-} from "./constants/url-links";
+import { useEffect, useState } from "react";
+import { HOME_LINK, ABOUT_LINK, CONTACT_LINK } from "./constants/url-links";
 import { GlobalStyles } from "./components/styles/Global";
 import { ThemeContainer, ThemeButton } from "./components/ThemeSwitching";
 import { ThemeProvider } from "styled-components";
@@ -23,9 +13,9 @@ import {
 } from "./components/styles/ThemeStyles";
 import { NavLink } from "./components/Navigation/NavLink";
 import { NavBar } from "./components/Navigation/Navbar";
-import SocialMedia from "./pages/SocialMedia";
 import { Footer } from "./components/Navigation/Footer";
-import { FadeOnViewContainer } from "./components/Containers/FadeOnViewContainer";
+import { FadeInOnViewContainer } from "./components/Containers/FadeInOnViewContainer";
+import AnimatedRoutes from "./pages/AnimatedRoutes";
 
 function App() {
 	const [selectedTheme, setSelectedTheme] = useState(dark);
@@ -79,20 +69,11 @@ function App() {
 				</ThemeContainer>
 			</NavBar>
 
-			<Routes>
-				<Route index element={<Home />} />
-				<Route path={HOME_LINK} element={<Home />} />
-				<Route path={ABOUT_LINK} element={<About />} />
-				<Route path={CONTACT_LINK} element={<Contact />} />
-				<Route path={SOCIAL_MEDIA_LINK} element={<SocialMedia />} />
-				<Route
-					path="*"
-					element={<ErrorPage errorCode={404} errorMessage="Page not found" />}
-				/>
-			</Routes>
-			<FadeOnViewContainer triggerOnce>
+			<AnimatedRoutes />
+
+			<FadeInOnViewContainer triggerOnce>
 				<Footer />
-			</FadeOnViewContainer>
+			</FadeInOnViewContainer>
 		</ThemeProvider>
 	);
 }
