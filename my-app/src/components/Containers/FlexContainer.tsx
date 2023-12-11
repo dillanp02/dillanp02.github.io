@@ -14,7 +14,9 @@ const Container = styled.div`
 	gap: ${DEFAULT_MARGIN};
 
 	@media screen and (max-width: ${MOBILE_RESPONSIVE_SIZE}) {
-		margin-inline: auto;
+		margin-inline: 10px;
+		height: fit-content;
+		min-height: auto;
 		/* flex-direction: column; */
 	}
 `;
@@ -23,6 +25,6 @@ type Props = {
 	children?: ReactNode;
 };
 
-export default function TextPictureContainer({ children }: Props) {
+export default function FlexContainer({ children }: Props) {
 	return <Container>{children}</Container>;
 }

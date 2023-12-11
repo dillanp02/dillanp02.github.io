@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter } from "react-router-dom";
-import { CustomThemeProvider } from "./components/Context/ThemeContext";
+import { AppContextProvider } from "./components/Context/AppContext";
 
 const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement
@@ -11,9 +11,9 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<HashRouter>
-			<CustomThemeProvider>
+			<AppContextProvider>
 				<App />
-			</CustomThemeProvider>
+			</AppContextProvider>
 		</HashRouter>
 	</React.StrictMode>
 );

@@ -22,7 +22,7 @@ export const MasonaryTile = styled.span`
 
 	@media screen and (max-width: ${MOBILE_RESPONSIVE_SIZE}) {
 		min-height: 100px;
-		width: 30%;
+		min-width: 150px;
 		flex: 1;
 	}
 `;

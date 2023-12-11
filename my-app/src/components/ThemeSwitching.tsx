@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ThemeContainer = styled.div`
@@ -21,7 +22,7 @@ export const ThemeButton = styled.button`
 	}
 `;
 
-export const LargerThemeButton = styled.button`
+const StyledLargerThemeButton = styled(motion.button)`
 	margin: 0 5px;
 	padding: 10px;
 	font-size: 0.5rem;
@@ -34,3 +35,19 @@ export const LargerThemeButton = styled.button`
 		box-shadow: 2px 2px 2px ${({ theme }) => theme.colors.border};
 	}
 `;
+
+interface Props {
+	onClick?: () => void;
+	className?: string;
+}
+
+export function LargerThemeButton({ onClick, className }: Props) {
+	return (
+		<StyledLargerThemeButton
+			whileHover={{ scale: 1.1 }}
+			whileTap={{ scale: 0.9 }}
+			onClick={onClick}
+			className={className}
+		/>
+	);
+}

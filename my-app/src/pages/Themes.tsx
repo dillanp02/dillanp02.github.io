@@ -1,5 +1,5 @@
 import { FadeInOnViewContainer } from "../components/Containers/FadeInOnViewContainer";
-import TextPictureContainer from "../components/Containers/TextPictureContainer";
+import FlexContainer from "../components/Containers/FlexContainer";
 import { BodyText } from "../components/Text/BodyText";
 import { TitleText } from "../components/Text/TitleText";
 import PageTransition from "./PageTransition";
@@ -7,12 +7,11 @@ import colour_img from "../images/theme.jpg";
 import DefaultImage from "../components/Images/DefaultImage";
 import { FlexItemContainer } from "../components/Containers/FlexItemContainer";
 import choice_img from "../images/choice.jpg";
-import { DefaultContainer } from "../components/Containers/DefaultContainer";
 import {
 	LargerThemeButton,
 	ThemeContainer,
 } from "../components/ThemeSwitching";
-import { useTheme } from "../components/Context/ThemeContext";
+import { useApplicationContext } from "../components/Context/AppContext";
 import {
 	blue,
 	dark,
@@ -23,31 +22,34 @@ import {
 } from "../components/styles/ThemeStyles";
 
 export default function Themes() {
-	const { updateTheme } = useTheme();
+	const { isMobile, theme, updateTheme } = useApplicationContext();
 
 	return (
 		<PageTransition $key="themepage">
 			<FadeInOnViewContainer triggerOnce>
-				<TextPictureContainer>
-					<FlexItemContainer $flex={1}>
+				<FlexContainer>
+					<FlexItemContainer $flex={isMobile ? 2 : 1}>
 						<TitleText>Themes</TitleText>
 						<BodyText>
 							Designed from the ground up in mind, themes are integrated heavily
 							into this site.
 						</BodyText>
 						<br />
-						<BodyText></BodyText>
+						<BodyText>
+							Click around, and hopefully you'll find one you like. It's that
+							easy.
+						</BodyText>
 					</FlexItemContainer>
 
-					<FlexItemContainer $flex={2}>
+					<FlexItemContainer $flex={isMobile ? 1 : 2}>
 						<DefaultImage src={colour_img} />
 					</FlexItemContainer>
-				</TextPictureContainer>
+				</FlexContainer>
 			</FadeInOnViewContainer>
 
 			<FadeInOnViewContainer triggerOnce>
-				<TextPictureContainer>
-					<FlexItemContainer $flex={2}>
+				<FlexContainer>
+					<FlexItemContainer $flex={isMobile ? 1 : 2}>
 						<DefaultImage
 							src={choice_img}
 							attribute="Image by macrovector"
@@ -55,7 +57,7 @@ export default function Themes() {
 						/>
 					</FlexItemContainer>
 
-					<FlexItemContainer $flex={1}>
+					<FlexItemContainer $flex={isMobile ? 2 : 1}>
 						<TitleText>Customisable</TitleText>
 						<BodyText>Everyone likes customisability.</BodyText>
 						<br />
@@ -71,49 +73,53 @@ export default function Themes() {
 							themes in mind.
 						</BodyText>
 					</FlexItemContainer>
-				</TextPictureContainer>
+				</FlexContainer>
 			</FadeInOnViewContainer>
 
-			<DefaultContainer>
-				<ThemeContainer>
-					<FadeInOnViewContainer $delay={600} travelDistance="-10vw">
-						<LargerThemeButton
-							onClick={() => updateTheme(light)}
-							className={`light`}
-						></LargerThemeButton>
-					</FadeInOnViewContainer>
-					<FadeInOnViewContainer $delay={500} travelDistance="-10vw">
-						<LargerThemeButton
-							onClick={() => updateTheme(dark)}
-							className={`dark`}
-						></LargerThemeButton>
-					</FadeInOnViewContainer>
-					<FadeInOnViewContainer $delay={400} travelDistance="-10vw">
-						<LargerThemeButton
-							onClick={() => updateTheme(blue)}
-							className={`blue`}
-						></LargerThemeButton>
-					</FadeInOnViewContainer>
-					<FadeInOnViewContainer $delay={300} travelDistance="-10vw">
-						<LargerThemeButton
-							onClick={() => updateTheme(green)}
-							className={`green`}
-						></LargerThemeButton>
-					</FadeInOnViewContainer>
-					<FadeInOnViewContainer $delay={200} travelDistance="-10vw">
-						<LargerThemeButton
-							onClick={() => updateTheme(brown)}
-							className={`brown`}
-						></LargerThemeButton>
-					</FadeInOnViewContainer>
-					<FadeInOnViewContainer $delay={100} travelDistance="-10vw">
-						<LargerThemeButton
-							onClick={() => updateTheme(pink)}
-							className={`pink`}
-						></LargerThemeButton>
-					</FadeInOnViewContainer>
-				</ThemeContainer>
-			</DefaultContainer>
+			<FlexContainer>
+				<FlexItemContainer>
+					<TitleText>Give it a go!</TitleText>
+					<ThemeContainer>
+						<FadeInOnViewContainer $delay={600} travelDistance="-10vw">
+							<LargerThemeButton
+								onClick={() => updateTheme(light)}
+								className={`light ${theme === light ? "active" : ""}`}
+							></LargerThemeButton>
+						</FadeInOnViewContainer>
+						<FadeInOnViewContainer $delay={500} travelDistance="-10vw">
+							<LargerThemeButton
+								onClick={() => updateTheme(dark)}
+								className={`dark ${theme === dark ? "active" : ""}`}
+							></LargerThemeButton>
+						</FadeInOnViewContainer>
+						<FadeInOnViewContainer $delay={400} travelDistance="-10vw">
+							<LargerThemeButton
+								onClick={() => updateTheme(blue)}
+								className={`blue ${theme === blue ? "active" : ""}`}
+							></LargerThemeButton>
+						</FadeInOnViewContainer>
+						<FadeInOnViewContainer $delay={300} travelDistance="-10vw">
+							<LargerThemeButton
+								onClick={() => updateTheme(green)}
+								className={`green ${theme === green ? "active" : ""}`}
+							></LargerThemeButton>
+						</FadeInOnViewContainer>
+						<FadeInOnViewContainer $delay={200} travelDistance="-10vw">
+							<LargerThemeButton
+								onClick={() => updateTheme(brown)}
+								className={`brown ${theme === brown ? "active" : ""}`}
+							></LargerThemeButton>
+						</FadeInOnViewContainer>
+						<FadeInOnViewContainer $delay={100} travelDistance="-10vw">
+							<LargerThemeButton
+								onClick={() => updateTheme(pink)}
+								className={`pink ${theme === pink ? "active" : ""}`}
+							></LargerThemeButton>
+						</FadeInOnViewContainer>
+					</ThemeContainer>
+				</FlexItemContainer>
+				<FlexItemContainer $flex={1}></FlexItemContainer>
+			</FlexContainer>
 		</PageTransition>
 	);
 }

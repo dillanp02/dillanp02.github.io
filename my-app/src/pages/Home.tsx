@@ -22,20 +22,21 @@ import { DefaultContainer } from "../components/Containers/DefaultContainer";
 import { BodyText } from "../components/Text/BodyText";
 import { FadeInOnViewContainer } from "../components/Containers/FadeInOnViewContainer";
 import PageTransition from "./PageTransition";
-import TextPictureContainer from "../components/Containers/TextPictureContainer";
+import FlexContainer from "../components/Containers/FlexContainer";
 import { FlexItemContainer } from "../components/Containers/FlexItemContainer";
 import DefaultImage from "../components/Images/DefaultImage";
 import hello_img from "../images/hello.jpg";
+import { useApplicationContext } from "../components/Context/AppContext";
 
 export default function Home() {
 	type Tile = "about" | "theme" | "social_media" | "";
 	const [showAboutPhoto, setShowAboutPhoto] = useState<Tile>("");
-
+	const { isMobile } = useApplicationContext();
 	return (
 		<PageTransition $key="homepage">
 			<FadeInOnViewContainer $delay={100} triggerOnce>
-				<TextPictureContainer>
-					<FlexItemContainer $flex={1}>
+				<FlexContainer>
+					<FlexItemContainer $flex={isMobile ? 2 : 1}>
 						<TitleText>Welcome👋</TitleText>
 						<BodyText>
 							Hiya!! Welcome to my small corner of the internet!
@@ -51,14 +52,14 @@ export default function Home() {
 							Click the tiles below to explore - see you around!
 						</BodyText>
 					</FlexItemContainer>
-					<FlexItemContainer $flex={2}>
+					<FlexItemContainer $flex={isMobile ? 1 : 2}>
 						<DefaultImage
 							src={hello_img}
 							attribute="Photo by Octavian Dan on Unsplash"
 							attributeLink="https://unsplash.com/@octadan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
 						></DefaultImage>
 					</FlexItemContainer>
-				</TextPictureContainer>
+				</FlexContainer>
 			</FadeInOnViewContainer>
 
 			<FadeInOnViewContainer $delay={500} triggerOnce>

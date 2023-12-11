@@ -11,6 +11,6 @@ export const DefaultContainer = styled.div`
 	background-color: ${({ theme }) => theme.colors.border};
 	border-radius: 10px;
 	@media screen and (max-width: ${MOBILE_RESPONSIVE_SIZE}) {
-		margin-inline: auto;
+		margin-inline: 10px;
 	}
 `;

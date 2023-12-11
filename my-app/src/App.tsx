@@ -13,10 +13,10 @@ import { NavLink } from "./components/Navigation/NavLink";
 import { NavBar } from "./components/Navigation/Navbar";
 import { Footer } from "./components/Navigation/Footer";
 import AnimatedRoutes from "./pages/AnimatedRoutes";
-import { useTheme } from "./components/Context/ThemeContext";
+import { useApplicationContext } from "./components/Context/AppContext";
 
 function App() {
-	const { theme, updateTheme } = useTheme();
+	const { theme, updateTheme } = useApplicationContext();
 
 	const HandleThemeChange = (theme: any) => {
 		updateTheme(theme);
