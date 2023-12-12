@@ -17,7 +17,6 @@ const Container = styled.div`
 		margin-inline: 10px;
 		height: fit-content;
 		min-height: auto;
-		/* flex-direction: column; */
 	}
 `;
 

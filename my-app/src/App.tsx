@@ -1,29 +1,38 @@
-import { HOME_LINK, ABOUT_LINK, CONTACT_LINK } from "./constants/url-links";
+import {
+	HOME_LINK,
+	ABOUT_LINK,
+	SOCIAL_MEDIA_LINK,
+} from "./constants/url-links";
 import { GlobalStyles } from "./components/styles/Global";
-import { ThemeContainer, ThemeButton } from "./components/ThemeSwitching";
+import { ThemeButton } from "./components/Buttons/ThemeSwitchingButtons";
 import { NavLink } from "./components/Navigation/NavLink";
 import { NavBar } from "./components/Navigation/Navbar";
 import { Footer } from "./components/Navigation/Footer";
 import AnimatedRoutes from "./pages/AnimatedRoutes";
 import { useApplicationContext } from "./components/Context/AppContext";
 import { THEME_LIST } from "./constants/global-constants";
+import { ThemeContainer } from "./components/Containers/ThemeContainer";
+import { AppContainer } from "./components/Containers/AppContainer";
 
 function App() {
-	const { theme, updateTheme } = useApplicationContext();
+	const { updateTheme } = useApplicationContext();
 
 	return (
-		<>
+		<AppContainer>
 			<GlobalStyles />
 			<NavBar>
 				<NavLink to={HOME_LINK}>Home</NavLink>
 				<NavLink to={ABOUT_LINK}>About</NavLink>
-				<NavLink to={CONTACT_LINK}>Contact</NavLink>
-				<ThemeContainer>
-					{THEME_LIST.map((_theme) => {
+				<NavLink to={SOCIAL_MEDIA_LINK}>Contact</NavLink>
+				<ThemeContainer $forcerow>
+					{THEME_LIST.map((_theme, index) => {
 						return (
 							<ThemeButton
+								key={index}
 								onClick={() => updateTheme(_theme)}
-								className={`${_theme.name} ${theme === _theme ? "active" : ""}`}
+								themename={_theme.name}
+								bgcolor={_theme.colors.background}
+								bordercolor={_theme.colors.border}
 							></ThemeButton>
 						);
 					})}
@@ -33,7 +42,7 @@ function App() {
 			<AnimatedRoutes />
 
 			<Footer />
-		</>
+		</AppContainer>
 	);
 }
 

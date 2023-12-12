@@ -1,7 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import {
 	ABOUT_LINK,
-	CONTACT_LINK,
 	HOME_LINK,
 	SOCIAL_MEDIA_LINK,
 	THEMES_LINK,
@@ -9,7 +8,6 @@ import {
 import SocialMedia from "./SocialMedia";
 import Home from "./Home";
 import About from "./About";
-import Contact from "./Contact";
 import ErrorPage from "./ErrorPage";
 import { AnimatePresence } from "framer-motion";
 import Themes from "./Themes";
@@ -23,7 +21,6 @@ function AnimatedRoutes() {
 				<Route index element={<Home />} />
 				<Route path={HOME_LINK} element={<Home />} />
 				<Route path={ABOUT_LINK} element={<About />} />
-				<Route path={CONTACT_LINK} element={<Contact />} />
 				<Route path={SOCIAL_MEDIA_LINK} element={<SocialMedia />} />
 				<Route path={THEMES_LINK} element={<Themes />} />
 				<Route

@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { DEFAULT_MARGIN } from "../../constants/css-constants";
 
 export const Footer = styled.footer`
 	background-color: ${({ theme }) => theme.colors.border};
-	min-height: 50px;
-	margin-top: ${DEFAULT_MARGIN};
 	border-top: 3px solid ${({ theme }) => theme.colors.text};
 	transition: all 1s ease;
+
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
 `;

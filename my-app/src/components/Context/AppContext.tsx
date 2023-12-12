@@ -14,7 +14,6 @@ import { MOBILE_RESPONSIVE_SIZE } from "../../constants/css-constants";
 //
 
 interface AppContextType {
-	theme: typeof dark;
 	updateTheme: Dispatch<SetStateAction<typeof dark>>;
 	isMobile: boolean;
 }
@@ -61,7 +60,7 @@ export const AppContextProvider = ({ children }: AppProviderProps) => {
 	}, []);
 
 	return (
-		<AppContext.Provider value={{ theme, updateTheme, isMobile }}>
+		<AppContext.Provider value={{ updateTheme, isMobile }}>
 			<ThemeProvider theme={theme}>{children}</ThemeProvider>
 		</AppContext.Provider>
 	);

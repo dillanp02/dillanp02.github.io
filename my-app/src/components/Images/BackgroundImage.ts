@@ -8,6 +8,7 @@ type ImgProp = {
 export const BackgroundImage = styled(StyledDefaultImage)<ImgProp>`
 	transition: all 1s ease;
 	opacity: 0;
+	height: 100%;
 	filter: blur(3px)
 		brightness(${({ theme }) => theme.colors.image_darkness_factor});
 

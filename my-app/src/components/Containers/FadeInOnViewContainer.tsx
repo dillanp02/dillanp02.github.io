@@ -38,7 +38,7 @@ export const FadeInOnViewContainer: React.FC<Props> = ({
 			<motion.div
 				initial={initialState}
 				animate={childrenInView ? { opacity: 1, x: 0 } : initialState}
-				transition={{ duration: inView ? 2 : 0, delay: $delay }}
+				transition={{ duration: inView ? 1 : 0, delay: inView ? $delay : 0 }}
 			>
 				{children}
 			</motion.div>

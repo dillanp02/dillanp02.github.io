@@ -7,15 +7,15 @@ import colour_img from "../images/theme.jpg";
 import DefaultImage from "../components/Images/DefaultImage";
 import { FlexItemContainer } from "../components/Containers/FlexItemContainer";
 import choice_img from "../images/choice.jpg";
-import {
-	LargerThemeButton,
-	ThemeContainer,
-} from "../components/ThemeSwitching";
+import { LargerThemeButton } from "../components/Buttons/ThemeSwitchingButtons";
 import { useApplicationContext } from "../components/Context/AppContext";
 import { THEME_LIST } from "../constants/global-constants";
+import { useTheme } from "styled-components";
+import { ThemeContainer } from "../components/Containers/ThemeContainer";
 
 export default function Themes() {
-	const { isMobile, theme, updateTheme } = useApplicationContext();
+	const { isMobile, updateTheme } = useApplicationContext();
+	const theme = useTheme();
 	return (
 		<PageTransition $key="themepage">
 			<FadeInOnViewContainer triggerOnce>
@@ -75,21 +75,28 @@ export default function Themes() {
 						{THEME_LIST.map((_theme, index) => {
 							return (
 								<FadeInOnViewContainer
-									$delay={(THEME_LIST.length - index) * 0.1}
+									key={index}
+									$delay={
+										// change the order that the list is delayed in depending
+										// on if in column or row layout
+										!isMobile ? (THEME_LIST.length - index) * 0.2 : index * 0.2
+									}
 									travelDistance="-10vw"
 								>
 									<LargerThemeButton
+										themename={_theme.name}
 										onClick={() => updateTheme(_theme)}
-										className={`${_theme.name} ${
-											theme === _theme ? "active" : ""
-										}`}
+										bgcolor={_theme.colors.background}
+										bordercolor={_theme.colors.border}
 									></LargerThemeButton>
 								</FadeInOnViewContainer>
 							);
 						})}
 					</ThemeContainer>
 				</FlexItemContainer>
-				<FlexItemContainer $flex={1}></FlexItemContainer>
+				<FlexItemContainer $flex={1}>
+					<TitleText>{theme.name}</TitleText>
+				</FlexItemContainer>
 			</FlexContainer>
 		</PageTransition>
 	);
