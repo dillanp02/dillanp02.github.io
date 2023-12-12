@@ -41,6 +41,7 @@ export const AppContextProvider = ({ children }: AppProviderProps) => {
 
 	const updateTheme: AppContextType["updateTheme"] = (newTheme) => {
 		setTheme(newTheme);
+		localStorage.setItem("current-theme", JSON.stringify(newTheme));
 	};
 
 	const [isMobile, setIsMobile] = useState(false);

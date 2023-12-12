@@ -1,27 +1,15 @@
 import { HOME_LINK, ABOUT_LINK, CONTACT_LINK } from "./constants/url-links";
 import { GlobalStyles } from "./components/styles/Global";
 import { ThemeContainer, ThemeButton } from "./components/ThemeSwitching";
-import {
-	light,
-	dark,
-	blue,
-	green,
-	brown,
-	pink,
-} from "./components/styles/ThemeStyles";
 import { NavLink } from "./components/Navigation/NavLink";
 import { NavBar } from "./components/Navigation/Navbar";
 import { Footer } from "./components/Navigation/Footer";
 import AnimatedRoutes from "./pages/AnimatedRoutes";
 import { useApplicationContext } from "./components/Context/AppContext";
+import { THEME_LIST } from "./constants/global-constants";
 
 function App() {
 	const { theme, updateTheme } = useApplicationContext();
-
-	const HandleThemeChange = (theme: any) => {
-		updateTheme(theme);
-		localStorage.setItem("current-theme", JSON.stringify(theme));
-	};
 
 	return (
 		<>
@@ -31,30 +19,14 @@ function App() {
 				<NavLink to={ABOUT_LINK}>About</NavLink>
 				<NavLink to={CONTACT_LINK}>Contact</NavLink>
 				<ThemeContainer>
-					<ThemeButton
-						className={`light ${theme === light ? "active" : ""}`}
-						onClick={() => HandleThemeChange(light)}
-					></ThemeButton>
-					<ThemeButton
-						className={`dark ${theme === dark ? "active" : ""}`}
-						onClick={() => HandleThemeChange(dark)}
-					></ThemeButton>
-					<ThemeButton
-						className={`blue ${theme === blue ? "active" : ""}`}
-						onClick={() => HandleThemeChange(blue)}
-					></ThemeButton>
-					<ThemeButton
-						className={`green ${theme === green ? "active" : ""}`}
-						onClick={() => HandleThemeChange(green)}
-					></ThemeButton>
-					<ThemeButton
-						className={`brown ${theme === brown ? "active" : ""}`}
-						onClick={() => HandleThemeChange(brown)}
-					></ThemeButton>
-					<ThemeButton
-						className={`pink ${theme === pink ? "active" : ""}`}
-						onClick={() => HandleThemeChange(pink)}
-					></ThemeButton>
+					{THEME_LIST.map((_theme) => {
+						return (
+							<ThemeButton
+								onClick={() => updateTheme(_theme)}
+								className={`${_theme.name} ${theme === _theme ? "active" : ""}`}
+							></ThemeButton>
+						);
+					})}
 				</ThemeContainer>
 			</NavBar>
 

@@ -19,22 +19,22 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   // theme buttons color
-  .light {
+  .light-theme {
     background-color: ${theme.light.colors.background};
   }
-  .dark {
+  .dark-theme {
     background-color: ${theme.dark.colors.background};
   }
-  .blue {
+  .blue-theme {
     background-color: ${theme.blue.colors.background};
   }
-  .green {
+  .green-theme {
     background-color: ${theme.green.colors.background};
   }
-  .brown {
+  .brown-theme {
     background-color: ${theme.brown.colors.background};
   }
-  .pink {
+  .pink-theme {
     background-color: ${theme.pink.colors.background};
   }
 

@@ -34,7 +34,7 @@ export default function Home() {
 	const { isMobile } = useApplicationContext();
 	return (
 		<PageTransition $key="homepage">
-			<FadeInOnViewContainer $delay={100} triggerOnce>
+			<FadeInOnViewContainer $delay={0.1} triggerOnce>
 				<FlexContainer>
 					<FlexItemContainer $flex={isMobile ? 2 : 1}>
 						<TitleText>Welcome👋</TitleText>
@@ -62,7 +62,7 @@ export default function Home() {
 				</FlexContainer>
 			</FadeInOnViewContainer>
 
-			<FadeInOnViewContainer $delay={500} triggerOnce>
+			<FadeInOnViewContainer $delay={0.5} triggerOnce>
 				<MasonaryContainer>
 					<TallMasonaryTile onMouseEnter={() => setShowAboutPhoto("about")}>
 						<DefaultLink to={ABOUT_LINK}>
@@ -114,7 +114,7 @@ export default function Home() {
 				</MasonaryContainer>
 			</FadeInOnViewContainer>
 
-			<FadeInOnViewContainer $delay={300} triggerOnce>
+			<FadeInOnViewContainer $delay={0.3} triggerOnce>
 				<DefaultContainer>
 					<TitleText>You are here</TitleText>
 					<BodyText>

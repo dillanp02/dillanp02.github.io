@@ -25,13 +25,11 @@ export const FadeInOnViewContainer: React.FC<Props> = ({
 			return;
 		}
 
-		setTimeout(() => {
-			setChildrenInView(inView);
-			if (inView) {
-				setTriggered(true);
-			}
-		}, $delay);
-	}, [inView, $delay, triggerOnce, triggered]);
+		setChildrenInView(inView);
+		if (inView) {
+			setTriggered(true);
+		}
+	}, [inView, triggerOnce, triggered]);
 
 	const initialState = { opacity: 0, x: travelDistance };
 
@@ -40,7 +38,7 @@ export const FadeInOnViewContainer: React.FC<Props> = ({
 			<motion.div
 				initial={initialState}
 				animate={childrenInView ? { opacity: 1, x: 0 } : initialState}
-				transition={{ duration: inView ? 2 : 0 }}
+				transition={{ duration: inView ? 2 : 0, delay: $delay }}
 			>
 				{children}
 			</motion.div>
