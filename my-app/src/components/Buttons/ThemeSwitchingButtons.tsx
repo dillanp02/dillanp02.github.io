@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled, { useTheme } from "styled-components";
+import React from "react";
 
 interface ThemeButtonProp {
 	bgcolor?: string;

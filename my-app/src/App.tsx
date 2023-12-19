@@ -13,6 +13,7 @@ import { useApplicationContext } from "./components/Context/AppContext";
 import { THEME_LIST } from "./constants/global-constants";
 import { ThemeContainer } from "./components/Containers/ThemeContainer";
 import { AppContainer } from "./components/Containers/AppContainer";
+import React from "react";
 
 function App() {
 	const { updateTheme } = useApplicationContext();

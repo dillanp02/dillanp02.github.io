@@ -28,6 +28,7 @@ import twitch_img from "../images/twitch.gif";
 import twitch_frame from "../images/twitch-frame.png";
 import { LinkWrapper } from "../components/Navigation/LinkWrapper";
 import PageTransition from "./PageTransition";
+import React from "react";
 
 export default function SocialMedia() {
 	type Tile =

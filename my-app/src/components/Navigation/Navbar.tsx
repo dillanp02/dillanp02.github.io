@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ReactNode } from "react";
 import { MOBILE_RESPONSIVE_SIZE } from "../../constants/css-constants";
+import React from "react";
 
 const Bar = styled.nav`
 	font-size: 2em;

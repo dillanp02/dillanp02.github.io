@@ -10,8 +10,7 @@ import {
 import { dark } from "../styles/ThemeStyles";
 import { ThemeProvider } from "styled-components";
 import { MOBILE_RESPONSIVE_SIZE } from "../../constants/css-constants";
-
-//
+import React from "react";
 
 interface AppContextType {
 	updateTheme: Dispatch<SetStateAction<typeof dark>>;

@@ -27,6 +27,7 @@ import { FlexItemContainer } from "../components/Containers/FlexItemContainer";
 import DefaultImage from "../components/Images/DefaultImage";
 import hello_img from "../images/hello.jpg";
 import { useApplicationContext } from "../components/Context/AppContext";
+import React from "react";
 
 export default function Home() {
 	type Tile = "about" | "theme" | "social_media" | "";

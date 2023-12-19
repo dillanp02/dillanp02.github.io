@@ -1,5 +1,6 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import React from "react";
 
 type Props = {
 	children?: ReactNode;

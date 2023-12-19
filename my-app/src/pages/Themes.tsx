@@ -12,6 +12,7 @@ import { useApplicationContext } from "../components/Context/AppContext";
 import { THEME_LIST } from "../constants/global-constants";
 import { useTheme } from "styled-components";
 import { ThemeContainer } from "../components/Containers/ThemeContainer";
+import React from "react";
 
 export default function Themes() {
 	const { isMobile, updateTheme } = useApplicationContext();

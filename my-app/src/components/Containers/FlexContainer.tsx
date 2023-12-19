@@ -5,6 +5,7 @@ import {
 	DEFAULT_MARGIN,
 	MOBILE_RESPONSIVE_SIZE,
 } from "../../constants/css-constants";
+import React from "react";
 
 const Container = styled.div`
 	display: flex;

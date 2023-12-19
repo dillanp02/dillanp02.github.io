@@ -11,6 +11,7 @@ import About from "./About";
 import ErrorPage from "./ErrorPage";
 import { AnimatePresence } from "framer-motion";
 import Themes from "./Themes";
+import React from "react";
 
 function AnimatedRoutes() {
 	const location = useLocation();

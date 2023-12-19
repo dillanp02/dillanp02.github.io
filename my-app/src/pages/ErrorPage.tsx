@@ -1,15 +1,16 @@
-import { FC } from "react"
+import { FC } from "react";
 import { DefaultContainer } from "../components/Containers/DefaultContainer";
+import React from "react";
 
-type Error = {errorCode? : number, errorMessage? : string}
+type Error = { errorCode?: number; errorMessage?: string };
 
 const ErrorPage: FC<Error> = ({ errorCode, errorMessage }): JSX.Element => {
-    return (
-        <DefaultContainer>
-            <h1>Error {errorCode}</h1>
-            <h2>{errorMessage}</h2>
-        </DefaultContainer>
-    )
-}
+	return (
+		<DefaultContainer>
+			<h1>Error {errorCode}</h1>
+			<h2>{errorMessage}</h2>
+		</DefaultContainer>
+	);
+};
 
 export default ErrorPage;

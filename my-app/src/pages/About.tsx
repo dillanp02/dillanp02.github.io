@@ -1,5 +1,6 @@
 import { DefaultContainer } from "../components/Containers/DefaultContainer";
 import PageTransition from "./PageTransition";
+import React from "react";
 
 export default function About() {
 	return (
