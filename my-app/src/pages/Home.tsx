@@ -13,9 +13,9 @@ import {
 	THEMES_LINK,
 } from "../constants/url-links";
 import { DefaultLink } from "../components/Navigation/DefaultLink";
-import portrait from "../images/self_portrait.jpg";
-import theme from "../images/theme.jpg";
-import sm from "../images/social_media.jpg";
+import portrait from "../assets/self_portrait.jpg";
+import theme from "../assets/theme.jpg";
+import sm from "../assets/social_media.jpg";
 import { BackgroundImage } from "../components/Images/BackgroundImage";
 import { useState } from "react";
 import { DefaultContainer } from "../components/Containers/DefaultContainer";
@@ -25,7 +25,7 @@ import PageTransition from "./PageTransition";
 import FlexContainer from "../components/Containers/FlexContainer";
 import { FlexItemContainer } from "../components/Containers/FlexItemContainer";
 import DefaultImage from "../components/Images/DefaultImage";
-import hello_img from "../images/hello.jpg";
+import hello_img from "../assets/hello.jpg";
 import { useApplicationContext } from "../components/Context/AppContext";
 import React from "react";
 
