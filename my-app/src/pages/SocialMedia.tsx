@@ -82,7 +82,7 @@ export default function SocialMedia() {
 					</LinkWrapper>
 				</MasonaryTile>
 
-				<ExtraTallMasonaryTile onMouseEnter={() => setCurrentPhoto("discord")}>
+				<TallMasonaryTile onMouseEnter={() => setCurrentPhoto("discord")}>
 					<LinkWrapper href="https://discord.gg/fBdfymTtQC">
 						<TitleText>Discord</TitleText>
 						<BackgroundImage
@@ -90,9 +90,9 @@ export default function SocialMedia() {
 							$show={currentPhoto === "discord"}
 						/>
 					</LinkWrapper>
-				</ExtraTallMasonaryTile>
+				</TallMasonaryTile>
 
-				<WideMasonaryTile onMouseEnter={() => setCurrentPhoto("youtube")}>
+				<WideTallMasonaryTile onMouseEnter={() => setCurrentPhoto("youtube")}>
 					<LinkWrapper href="https://www.youtube.com/channel/UCGfFQhTL2rniAsImnQNt09A">
 						<TitleText>YouTube</TitleText>
 						<BackgroundImage
@@ -100,9 +100,9 @@ export default function SocialMedia() {
 							$show={currentPhoto === "youtube"}
 						/>
 					</LinkWrapper>
-				</WideMasonaryTile>
+				</WideTallMasonaryTile>
 
-				<MasonaryTile onMouseEnter={() => setCurrentPhoto("letterboxd")}>
+				<WideMasonaryTile onMouseEnter={() => setCurrentPhoto("letterboxd")}>
 					<LinkWrapper href="https://letterboxd.com/dillanp02/">
 						<TitleText>Letterboxd</TitleText>
 						<BackgroundImage
@@ -110,7 +110,7 @@ export default function SocialMedia() {
 							$show={currentPhoto === "letterboxd"}
 						/>
 					</LinkWrapper>
-				</MasonaryTile>
+				</WideMasonaryTile>
 
 				<TallMasonaryTile onMouseEnter={() => setCurrentPhoto("bereal")}>
 					<LinkWrapper href="https://bere.al/dillanp02">
@@ -122,7 +122,7 @@ export default function SocialMedia() {
 					</LinkWrapper>
 				</TallMasonaryTile>
 
-				<WideTallMasonaryTile onMouseEnter={() => setCurrentPhoto("insta")}>
+				<WideMasonaryTile onMouseEnter={() => setCurrentPhoto("insta")}>
 					<LinkWrapper href="https://www.instagram.com/dillanp02/">
 						<TitleText>Instagram</TitleText>
 						<BackgroundImage
@@ -130,7 +130,7 @@ export default function SocialMedia() {
 							$show={currentPhoto === "insta"}
 						/>
 					</LinkWrapper>
-				</WideTallMasonaryTile>
+				</WideMasonaryTile>
 
 				<MasonaryTile onMouseEnter={() => setCurrentPhoto("reddit")}>
 					<LinkWrapper href="https://www.reddit.com/user/dillanp02">
@@ -142,7 +142,7 @@ export default function SocialMedia() {
 					</LinkWrapper>
 				</MasonaryTile>
 
-				<ExtraTallMasonaryTile onMouseEnter={() => setCurrentPhoto("twitch")}>
+				<MasonaryTile onMouseEnter={() => setCurrentPhoto("twitch")}>
 					<LinkWrapper href="https://www.twitch.tv/dillanp02">
 						<TitleText>Twitch</TitleText>
 						<BackgroundImage
@@ -150,7 +150,7 @@ export default function SocialMedia() {
 							$show={currentPhoto === "twitch"}
 						/>
 					</LinkWrapper>
-				</ExtraTallMasonaryTile>
+				</MasonaryTile>
 
 				<WideTallMasonaryTile onMouseEnter={() => setCurrentPhoto("linkedin")}>
 					<LinkWrapper href="https://www.linkedin.com/in/dillanp02/">
