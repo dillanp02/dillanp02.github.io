@@ -11,7 +11,7 @@ export default function PageTransition({ $key, children }: Props) {
 	return (
 		<motion.div
 			key={$key}
-			initial={{ opacity: 0, x: "-100vw" }}
+			initial={{ opacity: 0 }}
 			animate={{ opacity: 1, x: 0 }}
 			exit={{ opacity: 0, x: "100vw" }}
 			transition={{ duration: 1 }}
